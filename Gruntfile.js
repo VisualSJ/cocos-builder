@@ -4,6 +4,7 @@ const path = require("path");
 var p;
 
 var filedir = fs.readFileSync('basedir.txt', 'utf-8') || '';
+var moduleName = fs.readFileSync('name.txt', 'utf-8') || 'Builder';
 
 //读取moduleConfig.json
 var moduleList = JSON.parse(fs.readFileSync('moduleConfig.json', 'utf-8'))['module'];
@@ -27,7 +28,7 @@ var concat = {};
 for(p in moduleList){
     concat[p] = {
         src: moduleList[p],
-        dest: path.join(filedir, 'Builder', 'src/' + p + '.js')
+        dest: path.join(filedir, moduleName, 'src/' + p + '.js')
     }
 }
 concat['options'] = {
@@ -40,7 +41,7 @@ concat['options'] = {
 //动态生成uglify任务
 var uglify = {};
 for(p in moduleList){
-    uglify[path.join(filedir, 'Builder', './dist', p+'.js')] = moduleList[p];
+    uglify[path.join(filedir, moduleName, './dist', p+'.js')] = moduleList[p];
 }
 
 module.exports = function(grunt) {

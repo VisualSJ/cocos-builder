@@ -10,7 +10,17 @@ process.title = 'cocosDownloadBuilder';
 
 fs.writeFileSync(path.join(__dirname, '../', 'basedir.txt'), process.cwd());
 
-cp.exec('cd ' + path.join(__dirname, '../') + '\nnode_modules/grunt-cli/bin/grunt js', function(error, stdout, stderr){
-    stdout && console.log('stdout: ' + stdout);
-    stderr && console.log('stderr: ' + stderr);
-});
+var arg = process.argv.splice(2);
+global.DEBUG = false;
+
+for(var i=0; i<arg.length; i++){
+    if(arg[i] === '--debug'){
+        global.DEBUG = true;
+    }else if(arg[i] === '--name'){
+        fs.writeFileSync(path.join(__dirname, '../', 'name.txt'), arg[i+1]);
+        i++;
+    }
+}
+
+//开始压缩
+require('../lib/package');
