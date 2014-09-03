@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+const fs = require("fs");
+const path = require("path");
+const cp = require("child_process");
+
+'use strict';
+
+process.title = 'cocosDownloadBuilder';
+
+fs.writeFileSync(path.join(__dirname, '../', 'basedir.txt'), process.cwd());
+
+cp.exec('cd ' + path.join(__dirname, '../') + '\nnode_modules/grunt-cli/bin/grunt js', function(error, stdout, stderr){
+    stdout && console.log('stdout: ' + stdout);
+    stderr && console.log('stderr: ' + stderr);
+});
