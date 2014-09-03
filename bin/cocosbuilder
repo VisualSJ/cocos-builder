@@ -12,12 +12,14 @@ fs.writeFileSync(path.join(__dirname, '../', 'basedir.txt'), process.cwd());
 
 var arg = process.argv.splice(2);
 global.DEBUG = false;
+global.NAME = 'Builder';
 
 for(var i=0; i<arg.length; i++){
     if(arg[i] === '--debug'){
         global.DEBUG = true;
     }else if(arg[i] === '--name'){
         fs.writeFileSync(path.join(__dirname, '../', 'name.txt'), arg[i+1]);
+        global.NAME = arg[i+1];
         i++;
     }
 }
