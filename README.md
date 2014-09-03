@@ -22,7 +22,7 @@ npm install -g cocos-builder
 --name moduleName
 
 ```
-cocosbuilder --debug --name v3.0RC3
+sudo cocosbuilder --debug --name v3.0RC3
 ```
 
 版本对应:
