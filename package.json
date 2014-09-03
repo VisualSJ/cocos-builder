@@ -12,5 +12,12 @@
     "bin": "bin/cocosbuilder",
     "author": {
         "name": "VisualSJ"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/VisualSJ/cocos-builder.git"
+    },
+    "bugs": {
+        "url": "https://github.com/VisualSJ/cocos-builder/issues"
     }
 }
