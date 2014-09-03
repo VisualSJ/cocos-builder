@@ -76,7 +76,8 @@
             "cocos2d/core/CCConfiguration.js",
             "cocos2d/core/CCCamera.js",
             "cocos2d/core/CCDrawingPrimitivesCanvas.js",
-            "cocos2d/core/CCDrawingPrimitivesWebGL.js"
+            "cocos2d/core/CCDrawingPrimitivesWebGL.js",
+            "extensions/ccpool/CCPool.js"
         ],
         "webgl": [
             "core-webgl",
