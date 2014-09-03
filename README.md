@@ -27,4 +27,4 @@ cocosbuilder --debug --name v3.0RC3
 
 版本对应:
 
-0.0.6 --- v3.0 rc3
+0.0.7 --- v3.0 rc3
