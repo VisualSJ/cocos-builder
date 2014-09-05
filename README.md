@@ -3,28 +3,46 @@ Cocos2d-html5 download builder tools
 
 download builder打包工具。(mac下测试，其他平台未测试)
 
-安装:
+###1. 安装
+
+使用npm全局安装，如果需要更新，为保险起见，请先删除原来的版本（install改成uninstall就行了）.**必须全局安装**
 
 ```
 npm install -g cocos-builder
 ```
 
-必须全局安装。
+###2. 使用方法
 
-使用方法:
-
-进入cocos2d-html5引擎文件夹内。运行cocosbuilder。
-
-接受两个参数：
-
---debug
-
---name moduleName
+在命令行进入cocos2d-html5引擎文件夹内。运行cocosbuilder命令。
 
 ```
-sudo cocosbuilder --debug --name v3.0RC3
+cocosbuilder
 ```
 
-版本对应:
+将会在当前目录下生成一个Builder文件夹。里面则是download builder所有需要的包文件。
 
-0.0.7 --- v3.0 rc3
+###3. 参数
+
+- **--debug**
+
+    输出打包过程中所有的log信息。方便调试。默认关闭。
+    
+- **--name**
+
+    更改输出文件夹的名字
+    
+    ```
+    cocosbuilder --name v3.0-RC3
+    ```
+    
+- **--version**
+
+    指定使用哪个版本的module定义来打包
+    
+    ```
+    cocosbuilder --version v3.0RC3
+    ```
+    
+    - 支持的version列表（默认打包最新版本）
+    
+        1. v3.0RC3

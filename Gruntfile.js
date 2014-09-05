@@ -3,11 +3,19 @@ const path = require("path");
 
 var p;
 
-var filedir = fs.readFileSync('basedir.txt', 'utf-8') || '';
-var moduleName = fs.readFileSync('name.txt', 'utf-8') || 'Builder';
+var tmpdir = "";
+if(fs.existsSync("/tmp")){
+    tmpdir = "/tmp";
+}else if(fs.existsSync("c:\\windows\\temp")){
+    tmpdir = "c:\\windows\\temp";
+}
+
+var info = require(path.join(tmpdir, "./info"));
+var filedir = info.basedir || '';
+var moduleName = info.name || 'Builder';
 
 //读取moduleConfig.json
-var moduleList = JSON.parse(fs.readFileSync('moduleConfig.json', 'utf-8'))['module'];
+var moduleList = JSON.parse(fs.readFileSync(path.join(__dirname, "./lib/version", info.version, 'module.json'), 'utf-8'))['module'];
 //移出依赖关系
 for(p in moduleList){
     moduleList[p] = moduleList[p].filter(function(item){

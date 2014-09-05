@@ -76,7 +76,11 @@
             "cocos2d/core/CCConfiguration.js",
             "cocos2d/core/CCCamera.js",
             "cocos2d/core/CCDrawingPrimitivesCanvas.js",
-            "cocos2d/core/CCDrawingPrimitivesWebGL.js",
+            "cocos2d/core/CCDrawingPrimitivesWebGL.js"
+        ],
+        "ccpool": [
+            "core",
+
             "extensions/ccpool/CCPool.js"
         ],
         "webgl": [
@@ -85,6 +89,7 @@
             "kazmath"
         ],
         "core": [
+            "CCBoot.js",
             "Base64Images.js",
             "cocos2d/core/utils/BinaryLoader.js",
             "cocos2d/core/platform/CCClass.js",

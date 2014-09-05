@@ -1,28 +1,42 @@
 #!/usr/bin/env node
 
 const fs = require("fs");
-const path = require("path");
-const cp = require("child_process");
-
-'use strict';
 
 process.title = 'cocosDownloadBuilder';
 
-fs.writeFileSync(path.join(__dirname, '../', 'basedir.txt'), process.cwd());
+exports.DEBUG = false;
+exports.NAME = 'Builder';
+exports.VERSION = 'v3.0RC3';
+exports.DIR = process.cwd();
+exports.TMPDIR = "";
 
+//整理参数
 var arg = process.argv.splice(2);
-global.DEBUG = false;
-global.NAME = 'Builder';
-
 for(var i=0; i<arg.length; i++){
     if(arg[i] === '--debug'){
-        global.DEBUG = true;
+        exports.DEBUG = true;
     }else if(arg[i] === '--name'){
-        fs.writeFileSync(path.join(__dirname, '../', 'name.txt'), arg[i+1]);
-        global.NAME = arg[i+1];
+        exports.NAME = arg[i+1];
+        i++;
+    }else if(arg[i] === '--version'){
+        exports.VERSION = arg[i+1];
         i++;
     }
 }
 
-//开始压缩
-require('../lib/package');
+//mac os 以及 linux
+if(fs.existsSync("/tmp")){
+    exports.TMPDIR = "/tmp";
+}else if(fs.existsSync("c:\\windows\\temp")){
+    exports.TMPDIR = "c:\\windows\\temp";
+}else{
+    return;
+}
+
+//检查包以及文件完整性
+var check = require('../lib/check');
+var zip = require('../lib/zip');
+if(check.version() && check.module2engine() && check.engine2module()){
+    //开始压缩
+    zip.grunt();
+}
