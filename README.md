@@ -1,14 +1,18 @@
 Cocos2d-html5 download builder tools
 ==================
 
-download builder打包工具。
+cocos2d-js引擎按模块打包工具。
+
+将引擎内部部分文件合并，按各个功能模块输出打包后的文件。方便大家选择所需的模块。
+
+[cocos2d-js download builder](http://cocos2d-x.org/filecenter/jsbuilder/)
 
 兼容性：
 
 |平台|平台版本|测试版本|node版本|结果|
 |:----:|:--------:|:--------:|:----------:|:---:|
-|window|8.1|0.0.9|0.10.30|√|
-|mac|10.8.5|0.0.8|0.10.30|√|
+|windows|8.1|0.0.9|0.10.30|√|
+|mac|10.8.5|0.0.10|0.10.30|√|
 
 ###1. 安装
 
