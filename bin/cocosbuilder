@@ -6,7 +6,7 @@ process.title = 'cocosDownloadBuilder';
 
 exports.DEBUG = false;
 exports.NAME = 'Builder';
-exports.VERSION = 'v3.0RC3';
+exports.VERSION = 'v3.0final';
 exports.DIR = process.cwd();
 exports.TMPDIR = "";
 
@@ -32,6 +32,9 @@ if(fs.existsSync("/tmp")){
 }else{
     return;
 }
+
+console.log("version: " + exports.VERSION);
+console.log("out dir name: " + exports.NAME);
 
 //检查包以及文件完整性
 var check = require('../lib/check');
