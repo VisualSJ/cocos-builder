@@ -366,9 +366,17 @@
         "cocostudio": [
             "core",  "tilemap", "particle", "shape-nodes", "ccui",
 
+            "external/protobuf/ByteBuffer.min.js",
+            "external/protobuf/Long.min.js",
+            "external/protobuf/ProtoBuf.min.js",
+
             "extensions/cocostudio/components/CCComponent.js",
+            "extensions/ccui/layouts/UILayoutComponent.js",
             "extensions/cocostudio/components/CCComponentContainer.js",
             "extensions/cocostudio/CocoStudio.js",
+
+            "extensions/cocostudio/reader/CSParseBinary.js",
+            "extensions/cocostudio/reader/timeline/CSLoader.js",
 
             "extensions/cocostudio/armature/utils/CCArmatureDefine.js",
             "extensions/cocostudio/armature/utils/CCDataReaderHelper.js",
@@ -425,7 +433,6 @@
             "extensions/cocostudio/reader/timeline/ActionTimeline.js",
             "extensions/cocostudio/reader/timeline/ActionTimelineCache.js",
             "extensions/cocostudio/reader/timeline/Frame.js",
-            "extensions/cocostudio/reader/timeline/NodeReader.js",
             "extensions/cocostudio/reader/timeline/Timeline.js"
 
         ],

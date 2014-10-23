@@ -6,7 +6,7 @@ process.title = 'cocosDownloadBuilder';
 
 exports.DEBUG = false;
 exports.NAME = 'Builder';
-exports.VERSION = 'v3.0final';
+exports.VERSION = 'v3.1';
 exports.DIR = process.cwd();
 exports.TMPDIR = "";
 
