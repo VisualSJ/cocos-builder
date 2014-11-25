@@ -1,14 +1,10 @@
 const fs = require("fs");
 const path = require("path");
+const os = require("os");
 
 var p;
 
-var tmpdir = "";
-if(fs.existsSync("/tmp")){
-    tmpdir = "/tmp";
-}else if(fs.existsSync("c:\\windows\\temp")){
-    tmpdir = "c:\\windows\\temp";
-}
+var tmpdir = os.tmpdir();
 
 var info = require(path.join(tmpdir, "./info"));
 var filedir = info.basedir || '';

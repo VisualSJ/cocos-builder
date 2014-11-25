@@ -12,7 +12,7 @@ cocos2d-js引擎按模块打包工具。
 |平台|平台版本|测试版本|node版本|结果|
 |:----:|:--------:|:--------:|:----------:|:---:|
 |windows|8.1|0.0.9|0.10.30|√|
-|mac|10.8.5|0.0.12|0.10.30|√|
+|mac|10.8.5|0.0.13|0.10.30|√|
 
 ###1. 安装
 
@@ -34,29 +34,42 @@ cocosbuilder
 
 ###3. 参数
 
-- **--debug**
+- *-h --help**
+
+    说明 & 帮助，一些命令的简单说明
+
+- **-m --mode [value]**
+
+    以什么模式运行：
+    
+        1. pack， 默认以pack方法打开，执行打包命令，该命令不会检查文件正确性等。
+        
+        2. check，检查模式，以该命令打开的话，不会打包文件，仅仅正向反向检查module定义和目录内的文件情况。
+
+- **-d --debug [false | true]**
 
     输出打包过程中所有的log信息。方便调试。默认关闭。
     
-- **--name**
+- **-n --name [value]**
 
     更改输出文件夹的名字
     
     ```
-    cocosbuilder --name v3.0-RC3
+    cocosbuilder -n v3.2-beta
     ```
     
-- **--version**
+- **-v --version [value]**
 
     指定使用哪个版本的module定义来打包
     
     ```
-    cocosbuilder --version v3.0RC3
+    cocosbuilder -v v3.2beta
     ```
     
     - 支持的version列表（默认打包最新版本）
     
-        1. v3.1
-        2. v3.1beta
-        3. v3.0final
-        4. v3.0RC3
+        1. v3.2beta
+        2. v3.1
+        3. v3.1beta
+        4. v3.0final
+        5. v3.0RC3

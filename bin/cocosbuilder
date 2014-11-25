@@ -1,45 +1,58 @@
 #!/usr/bin/env node
 
-const fs = require("fs");
+const path = require("path");
+const os = require("os");
 
 process.title = 'cocosDownloadBuilder';
 
-exports.DEBUG = false;
-exports.NAME = 'Builder';
-exports.VERSION = 'v3.1';
-exports.DIR = process.cwd();
-exports.TMPDIR = "";
+var cmd = require("commander");
 
-//整理参数
-var arg = process.argv.splice(2);
-for(var i=0; i<arg.length; i++){
-    if(arg[i] === '--debug'){
-        exports.DEBUG = true;
-    }else if(arg[i] === '--name'){
-        exports.NAME = arg[i+1];
-        i++;
-    }else if(arg[i] === '--version'){
-        exports.VERSION = arg[i+1];
-        i++;
-    }
-}
+cmd
+    .option("-m, --mode [value]",    "Operation mode [ pack|check ]", "pack")
+    .option("-d, --debug [value]",   "Switching the debug output", false)
+    .option("-n, --name [value]",    "Set output directory name, default is 'Builder'", "Builder")
+    .option("-v, --version [value]", "Settings need to be packaged engine version", "v3.2beta")
+    .parse(process.argv);
 
-//mac os 以及 linux
-if(fs.existsSync("/tmp")){
-    exports.TMPDIR = "/tmp";
-}else if(fs.existsSync("c:\\windows\\temp")){
-    exports.TMPDIR = "c:\\windows\\temp";
-}else{
-    return;
-}
+cmd.temp = os.tmpdir();
+cmd.dir = process.cwd();
 
-console.log("version: " + exports.VERSION);
-console.log("out dir name: " + exports.NAME);
+console.log("");
+console.log("  current:");
+console.log("    mode     -  %s", cmd.mode.toString());
+console.log("    debug    -  %s", cmd.debug.toString());
+console.log("    version  -  %s", cmd.version.toString());
+console.log("    out dir  -  %s", path.join(cmd.dir, cmd.name));
 
 //检查包以及文件完整性
 var check = require('../lib/check');
 var zip = require('../lib/zip');
-if(check.version() && check.module2engine() && check.engine2module()){
+if(cmd.mode === "pack"){
     //开始压缩
-    zip.grunt();
+    zip.grunt()
+}else if(cmd.mode === "check"){
+    console.log("");
+    console.log("  checking: version supports");
+    console.log("");
+    check.version();
+    console.log("    finish...");
+    console.log("");
+    console.log("  checking: the legitimacy of the module definition file");
+    console.log("");
+    check.module2engine();
+    console.log("    finish...");
+    console.log("");
+    console.log("  checking: not defined in module file");
+    console.log("");
+    check.engine2module();
+    console.log("    finish...");
+    console.log("");
+}else{
+    console.log("");
+    console.log("  error: Unrecognized mode");
+    console.log("");
+    console.log("  Pattern list can support:");
+    console.log("    pack    Run the packaging procedure");
+    console.log("    check   Execute only check module and the edition");
+    console.log("");
 }
