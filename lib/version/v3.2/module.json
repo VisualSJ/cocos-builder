@@ -65,11 +65,11 @@
             "cocos2d/core/base-nodes/CCAtlasNodeCanvasRenderCmd.js",
             "cocos2d/core/textures/CCTextureAtlas.js",
             "cocos2d/core/CCCamera.js",
-            "cocos2d/core/CCDrawingPrimitivesCanvas.js",
-            "cocos2d/core/CCDrawingPrimitivesWebGL.js"
+            "cocos2d/core/CCDrawingPrimitivesCanvas.js"
         ],
         "core-extensions-webgl": [
-            "cocos2d/core/base-nodes/CCAtlasNodeWebGLRenderCmd.js"
+            "cocos2d/core/base-nodes/CCAtlasNodeWebGLRenderCmd.js",
+            "cocos2d/core/CCDrawingPrimitivesWebGL.js"
         ],
         "sprite-batch-node": [
             "core",
@@ -221,12 +221,14 @@
             "core",
             "webgl",
 
-            "cocos2d/node-grid/CCNodeGrid.js"
+            "cocos2d/node-grid/CCNodeGrid.js",
+            "cocos2d/node-grid/CCNodeGridWebGLRenderCmd.js"
         ],
         "parallax": [
             "core",
 
-            "cocos2d/parallax/CCParallaxNode.js"
+            "cocos2d/parallax/CCParallaxNode.js",
+            "cocos2d/parallax/CCParallaxNodeRenderCmd.js"
         ],
         "particle": [
             "core",
@@ -389,10 +391,13 @@
         "ccui": [
             "core", "gui", "actions", "labels", "text-input","clipping-nodes", "sprite-batch-node",
             "extensions/ccui/base-classes/CCProtectedNode.js",
+            "extensions/ccui/base-classes/CCProtectedNodeCanvasRenderCmd.js",
             "extensions/ccui/system/CocosGUI.js",
             "extensions/ccui/base-classes/UIWidget.js",
             "extensions/ccui/base-classes/UIScale9Sprite.js",
+            "extensions/ccui/base-classes/UIScale9SpriteCanvasRenderCmd.js",
             "extensions/ccui/layouts/UILayout.js",
+            "extensions/ccui/layouts/UILayoutCanvasRenderCmd.js",
             "extensions/ccui/layouts/UILayoutParameter.js",
             "extensions/ccui/layouts/UILayoutManager.js",
             "extensions/ccui/layouts/UIHBox.js",
@@ -413,19 +418,19 @@
             "extensions/ccui/uiwidgets/scroll-widget/UIListView.js",
             "extensions/ccui/uiwidgets/scroll-widget/UIPageView.js"
         ],
+        "ccui-webgl": [
+            "extensions/ccui/base-classes/CCProtectedNodeWebGLRenderCmd.js",
+            "extensions/ccui/base-classes/UIScale9SpriteWebGLRenderCmd.js",
+            "extensions/ccui/layouts/UILayoutWebGLRenderCmd.js"
+        ],
         "cocostudio": [
             "core",  "tilemap", "particle", "shape-nodes", "ccui",
-
-            "external/protobuf/ByteBuffer.min.js",
-            "external/protobuf/Long.min.js",
-            "external/protobuf/ProtoBuf.min.js",
 
             "extensions/cocostudio/components/CCComponent.js",
             "extensions/ccui/layouts/UILayoutComponent.js",
             "extensions/cocostudio/components/CCComponentContainer.js",
             "extensions/cocostudio/CocoStudio.js",
 
-            "extensions/cocostudio/reader/CSParseBinary.js",
             "extensions/cocostudio/reader/timeline/CSLoader.js",
 
             "extensions/cocostudio/armature/utils/CCArmatureDefine.js",
@@ -440,6 +445,7 @@
             "extensions/cocostudio/armature/display/CCDisplayFactory.js",
             "extensions/cocostudio/armature/display/CCDisplayManager.js",
             "extensions/cocostudio/armature/display/CCSkin.js",
+            "extensions/cocostudio/armature/display/CCSkinCanvasRenderCmd.js",
             "extensions/cocostudio/armature/animation/CCProcessBase.js",
             "extensions/cocostudio/armature/animation/CCArmatureAnimation.js",
             "extensions/cocostudio/armature/animation/CCTween.js",
@@ -488,6 +494,7 @@
 
         ],
         "cocostudio-webgl": [
+            "extensions/cocostudio/armature/display/CCSkinWebGLRenderCmd.js",
             "extensions/cocostudio/armature/CCArmatureWebGLRenderCmd.js"
         ],
         "gui": [
@@ -498,6 +505,7 @@
             "extensions/gui/control-extension/CCControlUtils.js",
             "extensions/gui/control-extension/CCInvocation.js",
             "extensions/gui/control-extension/CCScale9Sprite.js",
+            "extensions/gui/control-extension/CCScale9SpriteCanvasRenderCmd.js",
             "extensions/gui/control-extension/CCMenuPassive.js",
             "extensions/gui/control-extension/CCControlSaturationBrightnessPicker.js",
             "extensions/gui/control-extension/CCControlHuePicker.js",
@@ -507,10 +515,14 @@
             "extensions/gui/control-extension/CCControlStepper.js",
             "extensions/gui/control-extension/CCControlPotentiometer.js",
             "extensions/gui/scrollview/CCScrollView.js",
+            "extensions/gui/scrollview/CCScrollViewCanvasRenderCmd.js",
             "extensions/gui/scrollview/CCSorting.js",
             "extensions/gui/scrollview/CCTableView.js"
         ],
-
+        "gui-webgl": [
+            "extensions/gui/control-extension/CCScale9SpriteWebGLRenderCmd.js",
+            "extensions/gui/scrollview/CCScrollViewWebGLRenderCmd.js"
+        ],
 
         "pluginx" : [
             "core",

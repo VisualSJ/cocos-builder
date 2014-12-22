@@ -63,13 +63,13 @@ cocosbuilder
     指定使用哪个版本的module定义来打包
     
     ```
-    cocosbuilder -v v3.2beta
+    cocosbuilder -v v3.2
     ```
     
     - 支持的version列表（默认打包最新版本）
     
-        1. v3.2beta
+        1. v3.2
         2. v3.1
         3. v3.1beta
-        4. v3.0final
+        4. v3.0
         5. v3.0RC3
