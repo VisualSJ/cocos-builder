@@ -38,7 +38,7 @@
             "cocos2d/clipping-nodes/CCClippingNode.js",
             "cocos2d/clipping-nodes/CCClippingNodeCanvasRenderCmd.js"
         ],
-        "clipping-node-webgl": [
+        "clipping-nodes-webgl": [
             "cocos2d/clipping-nodes/CCClippingNodeWebGLRenderCmd.js"
         ],
         "compression": [
@@ -97,6 +97,7 @@
             "cocos2d/core/platform/miniFramework.js",
             "cocos2d/core/platform/CCMacro.js",
             "cocos2d/core/platform/CCTypesPropertyDefine.js",
+            "cocos2d/core/platform/CCTypesWebGL.js",
             "cocos2d/core/platform/CCTypes.js",
             "cocos2d/core/platform/CCEGLView.js",
             "cocos2d/core/platform/CCScreen.js",
@@ -117,6 +118,7 @@
             "cocos2d/core/base-nodes/CCNodeCanvasRenderCmd.js",
 
             "cocos2d/core/textures/TexturesPropertyDefine.js",
+            "cocos2d/core/textures/TexturesWebGL.js",
             "cocos2d/core/textures/CCTexture2D.js",
             "cocos2d/core/textures/CCTextureCache.js",
 
@@ -153,15 +155,13 @@
             "shaders",
             "core-extensions",
 
-            "cocos2d/core/platform/CCTypesWebGL.js",
-            "cocos2d/core/textures/TexturesWebGL.js",
             "cocos2d/core/CCDirectorWebGL.js",
             "cocos2d/core/CCConfiguration.js",
             "cocos2d/core/renderer/RendererWebGL.js",
             "cocos2d/core/base-nodes/CCNodeWebGLRenderCmd.js",
-            "cocos2d/core/labelttf/CCLabelTTFWebGLRenderCmd.js",
             "cocos2d/core/layers/CCLayerWebGLRenderCmd.js",
-            "cocos2d/core/sprites/CCSpriteWebGLRenderCmd.js"
+            "cocos2d/core/sprites/CCSpriteWebGLRenderCmd.js",
+            "cocos2d/core/labelttf/CCLabelTTFWebGLRenderCmd.js"
         ],
         "effects": [
             "core",
