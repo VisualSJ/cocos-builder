@@ -7,13 +7,6 @@ cocos2d-js引擎按模块打包工具。
 
 [cocos2d-js download builder](http://cocos2d-x.org/filecenter/jsbuilder/)
 
-兼容性：
-
-|平台|平台版本|测试版本|node版本|结果|
-|:----:|:--------:|:--------:|:----------:|:---:|
-|windows|8.1|0.0.9|0.10.30|√|
-|mac|10.8.5|0.1.0|0.10.30|√|
-
 ###1. 安装
 
 使用npm全局安装，如果需要更新，为保险起见，请先删除原来的版本（install改成uninstall就行了）.**必须全局安装**
@@ -55,7 +48,7 @@ cocosbuilder
     更改输出文件夹的名字
     
     ```
-    cocosbuilder -n v3.2-beta
+    cocosbuilder -n v3.3
     ```
     
 - **-v --version [value]**
@@ -63,13 +56,14 @@ cocosbuilder
     指定使用哪个版本的module定义来打包
     
     ```
-    cocosbuilder -v v3.2
+    cocosbuilder -v v3.3
     ```
     
     - 支持的version列表（默认打包最新版本）
-    
-        1. v3.2
-        2. v3.1
-        3. v3.1beta
-        4. v3.0
-        5. v3.0RC3
+
+        1. v3.3
+        2. v3.2
+        3. v3.1
+        4. v3.1beta
+        5. v3.0
+        6. v3.0RC3
