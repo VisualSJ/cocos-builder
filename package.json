@@ -1,6 +1,6 @@
 {
     "name": "cocos-builder",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "description": "cocos2d-js download builder package tools",
     "keywords": ["cocos2d-js"],
     "dependencies": {

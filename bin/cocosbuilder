@@ -11,7 +11,7 @@ cmd
     .option("-m, --mode [value]",    "Operation mode [ pack|check ]", "pack")
     .option("-d, --debug [value]",   "Switching the debug output", false)
     .option("-n, --name [value]",    "Set output directory name, default is 'Builder'", "Builder")
-    .option("-v, --version [value]", "Settings need to be packaged engine version", "v3.3")
+    .option("-v, --version [value]", "Settings need to be packaged engine version", "v3.4")
     .parse(process.argv);
 
 cmd.temp = os.tmpdir();
