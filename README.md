@@ -48,7 +48,7 @@ cocosbuilder
     更改输出文件夹的名字
     
     ```
-    cocosbuilder -n v3.8
+    cocosbuilder -n v3.9
     ```
     
 - **-v --version [value]**
@@ -56,11 +56,12 @@ cocosbuilder
     指定使用哪个版本的module定义来打包
     
     ```
-    cocosbuilder -v v3.8
+    cocosbuilder -v v3.9
     ```
     
     - 支持的version列表（默认打包最新版本）
 
+        v3.9
         v3.8
         v3.7
         v3.6
