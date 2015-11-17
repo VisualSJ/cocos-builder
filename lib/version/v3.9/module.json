@@ -86,9 +86,9 @@
         ],
         "core": [
             "CCBoot.js",
+            "cocos2d/core/event-manager/CCEventHelper.js",
             "Base64Images.js",
             "cocos2d/core/utils/BinaryLoader.js",
-            "cocos2d/core/utils/CCProfiler.js",
             "cocos2d/core/platform/CCClass.js",
             "cocos2d/core/cocoa/CCGeometry.js",
             "cocos2d/core/platform/CCSAXParser.js",
@@ -112,7 +112,6 @@
             "cocos2d/core/event-manager/CCEvent.js",
             "cocos2d/core/event-manager/CCEventListener.js",
             "cocos2d/core/event-manager/CCEventManager.js",
-            "cocos2d/core/event-manager/CCEventHelper.js",
 
             "cocos2d/core/base-nodes/BaseNodesPropertyDefine.js",
             "cocos2d/core/base-nodes/CCNode.js",
@@ -148,9 +147,8 @@
             "cocos2d/core/labelttf/CCLabelTTFCanvasRenderCmd.js",
             "cocos2d/core/platform/CCCommon.js",
 
-            "cocos2d/core/renderer/RendererCanvas.js"
-            
-
+            "cocos2d/core/renderer/RendererCanvas.js",
+            "cocos2d/core/utils/CCProfiler.js"
         ],
         "core-webgl": [
             "core",
