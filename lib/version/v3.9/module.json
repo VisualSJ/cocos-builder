@@ -88,6 +88,7 @@
             "CCBoot.js",
             "Base64Images.js",
             "cocos2d/core/utils/BinaryLoader.js",
+			"cocos2d/core/utils/CCProfiler.js",
             "cocos2d/core/platform/CCClass.js",
             "cocos2d/core/cocoa/CCGeometry.js",
             "cocos2d/core/platform/CCSAXParser.js",
@@ -111,6 +112,7 @@
             "cocos2d/core/event-manager/CCEvent.js",
             "cocos2d/core/event-manager/CCEventListener.js",
             "cocos2d/core/event-manager/CCEventManager.js",
+			"cocos2d/core/event-manager/CCEventHelper.js",
 
             "cocos2d/core/base-nodes/BaseNodesPropertyDefine.js",
             "cocos2d/core/base-nodes/CCNode.js",
@@ -420,10 +422,14 @@
             "extensions/ccui/uiwidgets/UITextField.js",
             "extensions/ccui/uiwidgets/UIRichText.js",
             "extensions/ccui/uiwidgets/scroll-widget/UIScrollView.js",
+			"extensions/ccui/uiwidgets/scroll-widget/UIScrollViewCanvasRenderCmd.js",
             "extensions/ccui/uiwidgets/scroll-widget/UIListView.js",
             "extensions/ccui/uiwidgets/scroll-widget/UIPageView.js",
             "extensions/ccui/uiwidgets/UIVideoPlayer.js",
             "extensions/ccui/uiwidgets/UIWebView.js"
+        ],
+		"ccui-webgl": [
+            "extensions/ccui/uiwidgets/scroll-widget/UIScrollViewWebGLRenderCmd.js"
         ],
         "cocostudio": [
             "core",  "tilemap", "particle", "shape-nodes", "ccui",
@@ -496,8 +502,6 @@
             "extensions/gui/control-extension/CCControlButton.js",
             "extensions/gui/control-extension/CCControlUtils.js",
             "extensions/gui/control-extension/CCInvocation.js",
-            "extensions/gui/control-extension/CCScale9Sprite.js",
-            "extensions/gui/control-extension/CCScale9SpriteCanvasRenderCmd.js",
             "extensions/gui/control-extension/CCMenuPassive.js",
             "extensions/gui/control-extension/CCControlSaturationBrightnessPicker.js",
             "extensions/gui/control-extension/CCControlHuePicker.js",
@@ -512,7 +516,6 @@
             "extensions/gui/scrollview/CCTableView.js"
         ],
         "gui-webgl": [
-            "extensions/gui/control-extension/CCScale9SpriteWebGLRenderCmd.js",
             "extensions/gui/scrollview/CCScrollViewWebGLRenderCmd.js"
         ],
 
@@ -532,7 +535,8 @@
             "ccbreader",
             "editbox",
             "cocostudio",
-            "pluginx"
+            "pluginx",
+			"runtime"
         ],
 
         "box2d": [
